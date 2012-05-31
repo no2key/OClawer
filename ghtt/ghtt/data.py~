@@ -1,0 +1,19 @@
+import sqlite3
+from os import path
+filename='~/GitRep/Odata'      
+conn.execute('insert into fjsen values(?,?,?,?)',(None,'ycc1','ycc2','ycc3'))
+conn.commit()
+if path.exists(filename):
+    conn=sqlite3.connect(filename)
+else:
+    conn=create_table(filename)
+
+def create_table(filename):
+    conn=sqlite3.connect(filename)
+    conn.execute("create table fjsen(mid integer primary key autoincrement,mname text,mnum int)")
+    conn.commit()
+    return conn
+    
+
+        
+
