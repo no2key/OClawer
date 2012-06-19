@@ -5,10 +5,8 @@
 #-*- coding: utf-8 -*-
 from scrapy.item import Item, Field
 
-class GhttItem(Item):
+class NewsItem(Item):
     title=Field()
     link=Field()
     addtime=Field()
-    reply=Field()
-    check=Field()
-    nextclaw=Field()
+    school=Field()

@@ -47,7 +47,8 @@ class ghttSpider(BaseSpider):
         hxs=HtmlXPathSelector(response)
         title=hxs.select('//title/text()').extract()[0]
         print title        
-        if (title==u'观海听涛 - 哈尔滨工业大学'):#如果当前是首页(各个模块的汇总页http://bbs.ghtt.net/forum.php)            
+        if (title==u'哈尔滨工业大学威海校区-观海听涛 - 哈尔滨工业大学'):#如果当前是首页(各个模块的汇总页http://bbs.ghtt.net/forum.php)            
+            
             self.claw_module_name(hxs)
             url=BaseUrl+self.module_urls[0]
             self.module_urls.pop(0)
